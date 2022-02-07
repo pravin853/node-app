@@ -2,10 +2,10 @@
 
 # This is to demo
 
-node_app=`docker ps -a | grep nodeapp | awk '{print $NF}'`
-if [ $node_app=='nodeapp' ]; then
-    echo "nodeapp is running, lets delete"
-        docker rm -f nodeapp
+node_app=`docker ps -a | grep node-app | awk '{print $NF}'`
+if [ $node_app=='node-app' ]; then
+    echo "node-app is running, lets delete"
+        docker rm -f node-app
 fi
 
 images=`docker images | grep kammana/nodejenkins | awk '{print $3}'`
